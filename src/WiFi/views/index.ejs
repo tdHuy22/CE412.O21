@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi Scanner</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+
+<body>
+    <h1>Wi-Fi Scanner</h1>
+    <ul>
+        <% for (var i=0; i < WiFi_List.length; i++) { %>
+            <li>
+                <%= WiFi_List[i] %>
+            </li>
+            <% } %>
+    </ul>
+    <form action="/connect" method="post">
+        <div id="ssid-form">
+            <label for="wifi">Choose a Wi-Fi network:</label>
+            <select name="wifi" id="wifi">
+                <% for (var i=0; i < WiFi_List.length; i++) { %>
+                    <option value="<%= WiFi_List[i] %>">
+                        <%= WiFi_List[i] %>
+                    </option>
+                    <% } %>
+            </select>
+        </div>
+        <br>
+        <div id="password-form">
+            <label for="password">Enter Wi-Fi password:</label>
+            <input type="password" name="password" required>
+        </div>
+        <br>
+        <input type="submit" value="Connect">
+    </form>
+    <a href="/scan">Scan for Wi-Fi networks</a>
+</body>
+
+</html>

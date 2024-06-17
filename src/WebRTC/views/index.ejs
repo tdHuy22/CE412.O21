@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Video Chat App</title>
+        <link href="css/user-style.css" rel="stylesheet" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+    </head>
+    <body>
+
+        <div id="video-chat-form">
+            <h2 class="text">Video Chat App</h2>
+            <input id="roomName" type="text" placeholder="Enter the room name" />
+            <button id="join">Join</button>
+        </div>
+        <div id="video-chat-rooms">
+            <video id="user-video"></video>
+        </div>
+        <div class="btn-group" style="display: none;">
+            <button id="startSharingButton">Start Sharing</button>
+            <button id="audioButton">Audio Off</button>
+            <button id="leaveButton">Leave KIT</button>
+            <button id="stopSharingButton">Stop Sharing</button>
+        </div>
+    </body>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+        integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+        crossorigin="anonymous"></script>
+    <script src="js/user-script.js"></script>
+</html>
